@@ -1,0 +1,8 @@
+encode indcode, gen(ind_id)
+order ind_id, after(indcode) 
+
+gen indcode1 = substr(indcode, 1, 1) //提取首位行业代码
+order indcode1, after(region4id) 
+
+encode indcode1, gen(ind1_id)
+order ind1_id, after(indcode1) 
